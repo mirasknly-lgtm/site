@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра | Портфолио</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">DevPortfolio</div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="game.html" class="active">Мини-игра</a>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="game-section">
+            <h2>Крестики-нолики на JavaScript</h2>
+            <p>Отличная демонстрация работы с массивами, функциями и DOM.</p>
+            
+            <div class="game-status" id="status">Ходят крестики (X)</div>
+            
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            
+            <button id="resetBtn" class="btn">Начать заново</button>
+        </section>
+    </main>
+</body>
+</html>
