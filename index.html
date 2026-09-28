@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div style="font-weight: bold; font-size: 1.2rem;">DevPortfolio.</div>
+        <div class="nav-links">
+            <a href="#work">Case Studies</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button id="theme-toggle">Toggle Dark Mode</button>
+    </nav>
+
+    <header class="hero">
+        <h1>Building Digital Experiences that Convert</h1>
+        <p>I transform complex problems into fast, accessible, and highly-converting web applications. Specializing in modern JavaScript frameworks and scalable architecture.</p>
+        <a href="#work" class="btn">View My Case Studies</a>
+    </header>
+
+    <section id="work" class="projects">
+        <h2 class="section-title">Featured Work</h2>
+        <div class="project-card">
+            <h3>Full-Stack SaaS MVP: MetricsDash</h3>
+            <div class="case-study-grid">
+                <div class="case-block">
+                    <strong>The Problem</strong>
+                    Small e-commerce owners lacked a unified, real-time dashboard to track inventory across multiple platforms, leading to overselling.
+                </div>
+                <div class="case-block">
+                    <strong>The Solution</strong>
+                    Engineered a centralized analytics dashboard with webhook integrations to aggregate sales data instantly.
+                </div>
+                <div class="case-block">
+                    <strong>Tech Stack</strong>
+                    React, Node.js, Express, PostgreSQL, Chart.js
+                </div>
+                <div class="case-block">
+                    <strong>Measurable Results</strong>
+                    Processed 10,000+ daily events with zero latency. Achieved a 98/100 Lighthouse performance score.
+                </div>
+            </div>
+            <div style="margin-top: 1rem;">
+                <a href="#" class="btn-outline">View Live Demo</a>
+                <a href="#" class="btn-outline">Read GitHub Repo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Let's Work Together</h2>
+        <div class="contact-grid">
+            <div class="tech-stack">
+                <h3>My Core Technologies</h3>
+                <p style="margin-top: 0.5rem; opacity: 0.9;">I select the best tools to ensure scalability and speed for your project.</p>
+                <ul>
+                    <li>JavaScript (ES6+)</li>
+                    <li>TypeScript</li>
+                    <li>React / Next.js</li>
+                    <li>Node.js</li>
+                    <li>Tailwind CSS</li>
+                    <li>PostgreSQL</li>
+                </ul>
+            </div>
+            
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Tell me about your project or role..." required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
