@@ -3,78 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио Разработчика</title>
+    <title>Мое Портфолио</title>
+    <!-- Важно: вот эта строка подключает дизайн -->
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <nav>
-        <div style="font-weight: bold; font-size: 1.2rem;">DevPortfolio.</div>
+        <div class="logo">DevPortfolio</div>
         <div class="nav-links">
-            <a href="#work">Кейсы</a>
-            <a href="#contact">Контакты</a>
+            <a href="index.html" class="active">Главная</a>
+            <a href="game.html">Мини-игра</a>
         </div>
-        <button id="theme-toggle">Включить темную тему</button>
     </nav>
-
-    <header class="hero">
-        <h1>Создаю цифровые продукты, которые приносят результат</h1>
-        <p>Я превращаю сложные задачи в быстрые, доступные и высококонверсионные веб-приложения. Специализируюсь на современных JavaScript-фреймворках и масштабируемой архитектуре.</p>
-        <a href="#work" class="btn">Посмотреть мои кейсы</a>
-    </header>
-
-    <section id="work" class="projects">
-        <h2 class="section-title">Избранные работы</h2>
-        <div class="project-card">
-            <h3>Full-Stack SaaS MVP: MetricsDash</h3>
-            <div class="case-study-grid">
-                <div class="case-block">
-                    <strong>Проблема</strong>
-                    Владельцам небольших интернет-магазинов не хватало единой панели для отслеживания запасов на разных платформах в реальном времени, что приводило к продажам отсутствующих товаров.
-                </div>
-                <div class="case-block">
-                    <strong>Решение</strong>
-                    Разработал централизованную аналитическую панель с интеграцией вебхуков для мгновенного сбора данных о продажах.
-                </div>
-                <div class="case-block">
-                    <strong>Технологический стек</strong>
-                    React, Node.js, Express, PostgreSQL, Chart.js
-                </div>
-                <div class="case-block">
-                    <strong>Измеримые результаты</strong>
-                    Обработка 10 000+ событий ежедневно с нулевой задержкой. Оценка производительности Lighthouse — 98/100.
-                </div>
+    <main class="container">
+        <section class="hero">
+            <h1>Привет! Я Web-Разработчик</h1>
+            <p>Это полноценный многостраничный сайт с современным дизайном и интерактивными элементами.</p>
+        </section>
+        <section class="features">
+            <div class="card">
+                <h3>Современный дизайн</h3>
+                <p>Использование CSS Grid и Flexbox для идеального отображения на любых экранах.</p>
             </div>
-            <div style="margin-top: 1rem;">
-                <a href="#" class="btn-outline">Смотреть демо</a>
-                <a href="#" class="btn-outline">Репозиторий GitHub</a>
+            <div class="card">
+                <h3>Интерактивность (JS)</h3>
+                <p>Я написал полноценную браузерную игру, чтобы показать свои навыки программирования.</p>
+                <br>
+                <a href="game.html" class="btn">Сыграть со мной</a>
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <h2 class="section-title">Давайте работать вместе</h2>
-        <div class="contact-grid">
-            <div class="tech-stack">
-                <h3>Мои основные технологии</h3>
-                <p style="margin-top: 0.5rem; opacity: 0.9;">Я выбираю лучшие инструменты для обеспечения масштабируемости и скорости вашего проекта.</p>
-                <ul>
-                    <li>JavaScript (ES6+)</li>
-                    <li>TypeScript</li>
-                    <li>React / Next.js</li>
-                    <li>Node.js</li>
-                    <li>Tailwind CSS</li>
-                    <li>PostgreSQL</li>
-                </ul>
-            </div>
-            
-            <form class="contact-form" id="contactForm">
-                <input type="text" placeholder="Ваше имя" required>
-                <input type="email" placeholder="Ваш Email" required>
-                <textarea placeholder="Расскажите о вашем проекте или вакансии..." required></textarea>
-                <button type="submit" class="btn">Отправить сообщение</button>
-            </form>
-        </div>
-    </section>
+        </section>
+    </main>
 </body>
 </html>
