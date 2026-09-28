@@ -1,16 +1,16 @@
-// Dark Mode Toggle Logic
+// Логика переключения темной темы
 const themeToggleBtn = document.getElementById('theme-toggle');
 
 themeToggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     if (document.body.classList.contains('dark-mode')) {
-        themeToggleBtn.textContent = 'Toggle Light Mode';
+        themeToggleBtn.textContent = 'Включить светлую тему';
     } else {
-        themeToggleBtn.textContent = 'Toggle Dark Mode';
+        themeToggleBtn.textContent = 'Включить темную тему';
     }
 });
 
-// Smooth Scrolling for Anchor Links
+// Плавная прокрутка для якорных ссылок
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -20,8 +20,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form Submission Simulation
+// Симуляция отправки формы
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Form submission simulation successful!');
+    alert('Симуляция отправки формы прошла успешно!');
 });
