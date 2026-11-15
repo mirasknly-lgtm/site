@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaCorp ID — Вход в корпоративный портал (Демо-стенд)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Плашка-напоминание вверху экрана для безопасности -->
+    <div class="top-banner">
+        УЧЕБНЫЙ СИМУЛЯТОР • Введенные данные не сохраняются и не передаются по сети
+    </div>
+
+    <main class="container">
+        <div class="card" id="authCard">
+            <!-- Логотип вымышленной компании -->
+            <div class="brand">
+                <div class="logo-icon">N</div>
+                <span class="brand-name">NovaCorp <strong>Workspace</strong></span>
+            </div>
+
+            <!-- ЭТАП 1: Ввод логина и пароля -->
+            <section id="stepLogin" class="step active">
+                <h1>Требуется повторный вход</h1>
+                <p class="subtitle">Ваша сессия истекла из соображений безопасности. Подтвердите учетные данные для доступа к файлам.</p>
+
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="email">Корпоративный Email</label>
+                        <input type="email" id="email" placeholder="name@novacorp-demo.local" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" placeholder="••••••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-primary" id="loginBtn">
+                        <span class="btn-text">Продолжить</span>
+                        <span class="loader"></span>
+                    </button>
+                </form>
+
+                <div class="urgency-note">
+                    ⚠️ Доступ к документу <em>«Премии_Q4_Финал.pdf»</em> будет заблокирован через <span id="timer">04:59</span>
+                </div>
+            </section>
+
+            <!-- ЭТАП 2: Имитация перехвата 2FA -->
+            <section id="step2FA" class="step">
+                <h1>Двухфакторная проверка</h1>
+                <p class="subtitle">Мы отправили 6-значный код подтверждения в ваше приложение аутентификации.</p>
+
+                <form id="twoFactorForm">
+                    <div class="input-group">
+                        <label for="code">Код подтверждения</label>
+                        <input type="text" id="code" class="code-input" maxlength="6" placeholder="000 000" required>
+                    </div>
+                    <button type="submit" class="btn-primary" id="verifyBtn">
+                        <span class="btn-text">Подтвердить вход</span>
+                        <span class="loader"></span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- ЭТАП 3: Образовательный разбор (Раскрытие симуляции) -->
+            <section id="stepReveal" class="step reveal-box">
+                <div class="alert-badge">СИМУЛЯЦИЯ ФИШИНГА ЗАВЕРШЕНА</div>
+                <h2>Что только что произошло?</h2>
+                <p class="reveal-desc">
+                    Если бы это был реальный сайт злоумышленников, ваш логин, пароль и одноразовый код 2FA только что позволили бы обойти защиту аккаунта в реальном времени (атака класса <strong>AiTM — Adversary-in-the-Middle</strong>).
+                </p>
+
+                <div class="red-flags">
+                    <h3>Признаки фишинга на этом экране:</h3>
+                    <ul>
+                        <li><strong>Искусственная срочность:</strong> таймер обратного отсчета и упоминание «премий» заставляют спешить и не проверять детали.</li>
+                        <li><strong>Неожиданный запрос входа:</strong> переход по внешней ссылке сразу на форму авторизации.</li>
+                        <li><strong>Доменное имя:</strong> в реальной атаке адрес в строке браузера отличался бы от официального (например, <code>novac0rp-login.com</code>).</li>
+                    </ul>
+                </div>
+
+                <button type="button" class="btn-secondary" id="resetBtn">Пройти демонстрацию заново</button>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
